@@ -1,224 +1,201 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Donate | BetterMe+</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <script>
-    tailwind.config = {
-      theme: { extend: {
-        colors: {
-          gold:{50:'#fff9e6',100:'#fff0b3',200:'#ffe680',300:'#fcdb4d',400:'#fcb711',500:'#e5a200',600:'#b37e00'},
-          ocean:{50:'#e6f2fa',100:'#b3d9f0',200:'#80bfe6',300:'#4da6dc',400:'#1a8cd2',500:'#025ca7',600:'#024a86',700:'#013764',800:'#012543',900:'#001221'},
-          warm:{50:'#fdf8f3',100:'#f9ede0',200:'#f3dbc1'},
-          sage:{50:'#f0f5f0',100:'#d9e8d9',500:'#4a8c4a',600:'#3b703b'},
-        },
-        fontFamily: { sans:['Inter','system-ui','sans-serif'], serif:['Playfair Display','Georgia','serif'] }
-      }}
-    }
-  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <link rel="stylesheet" href="../css/styles.css" />
 </head>
-<body class="bg-warm-50 text-gray-800 font-sans antialiased">
+<body>
 
-  <!-- Nav -->
-  <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500 scrolled">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-      <a href="../index.html" class="flex items-center gap-2">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center shadow-lg"><span class="text-white font-bold text-lg">B+</span></div>
-        <span class="font-serif font-bold text-xl text-white">BetterMe<span class="text-gold-400">+</span></span>
-      </a>
-      <div class="hidden md:flex items-center gap-8">
-        <a href="../index.html#programs" class="text-sm font-medium text-white/80 hover:text-gold-400 transition">Programs</a>
-        <a href="sponsor.html" class="text-sm font-medium text-white/80 hover:text-gold-400 transition">Sponsor a Child</a>
-        <a href="community.html" class="text-sm font-medium text-white/80 hover:text-gold-400 transition">Community Impact</a>
-        <a href="volunteer.html" class="text-sm font-medium text-white/80 hover:text-gold-400 transition">Volunteer</a>
-        <a href="stories.html" class="text-sm font-medium text-white/80 hover:text-gold-400 transition">Stories</a>
-        <a href="donate.html" class="px-5 py-2.5 bg-gold-400 text-gray-900 rounded-full text-sm font-semibold">Donate Now</a>
-      </div>
-      <button id="menu-toggle" class="md:hidden text-white"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
-    </div>
-    <div id="mobile-menu" class="hidden md:hidden bg-ocean-800/95 backdrop-blur-xl border-t border-white/10">
-      <div class="px-6 py-4 flex flex-col gap-3">
-        <a href="../index.html#programs" class="text-white/80 py-2">Programs</a>
-        <a href="sponsor.html" class="text-white/80 py-2">Sponsor a Child</a>
-        <a href="community.html" class="text-white/80 py-2">Community Impact</a>
-        <a href="volunteer.html" class="text-white/80 py-2">Volunteer</a>
-        <a href="stories.html" class="text-white/80 py-2">Stories</a>
-        <a href="donate.html" class="text-center px-5 py-2.5 bg-gold-400 text-gray-900 rounded-full font-semibold">Donate Now</a>
-      </div>
-    </div>
-  </nav>
+  <header class="header scrolled">
+    <div id="menu-btn" class="fas fa-bars"></div>
+    <a href="../index.html" class="logo">betterMe<i class="fas fa-heart"></i></a>
+    <nav class="navbar">
+      <a href="../index.html#home">home</a>
+      <a href="../index.html#programs">programs</a>
+      <a href="sponsor.html">sponsor</a>
+      <a href="community.html">impact</a>
+      <a href="volunteer.html">volunteer</a>
+      <a href="stories.html">stories</a>
+    </nav>
+    <a href="donate.html" class="btn btn-filled">donate now</a>
+  </header>
 
-  <!-- Header -->
-  <section class="page-header pt-32 pb-20">
-    <div class="max-w-7xl mx-auto px-6 relative z-10">
-      <p class="text-gold-400 font-semibold text-sm uppercase tracking-widest mb-3">Every Dollar Counts</p>
-      <h1 class="text-4xl lg:text-6xl font-serif font-bold text-white mb-4">Make a Gift</h1>
-      <p class="text-white/60 text-lg max-w-2xl">94% of every donation goes directly to our programs. Your generosity transforms lives and communities.</p>
-    </div>
+  <section class="page-hero">
+    <span class="tag">every dollar counts</span>
+    <h1>make a gift</h1>
+    <p>94% of every donation goes directly to our programs. Your generosity transforms lives and communities.</p>
   </section>
 
-  <!-- Donation Form -->
-  <section class="py-20">
-    <div class="max-w-4xl mx-auto px-6">
-      <div class="grid lg:grid-cols-5 gap-8">
-        <!-- Form -->
-        <div class="lg:col-span-3">
-          <div class="bg-white rounded-3xl p-8 border border-gray-100 shadow-xl">
-            <h2 class="text-2xl font-serif font-bold text-gray-900 mb-6">Your Donation</h2>
+  <!-- DONATION FORM -->
+  <section style="padding:6rem 9%;">
+    <div style="max-width:100rem;margin:0 auto;display:flex;flex-wrap:wrap;gap:3rem;">
+      <!-- Form -->
+      <div style="flex:1 1 50rem;">
+        <div style="border:var(--border);border-radius:var(--blob);padding:4rem;background:var(--white);transition:all .3s ease;" onmouseover="this.style.borderRadius='var(--blob-hover)'" onmouseout="this.style.borderRadius='var(--blob)'">
+          <h2 style="font-size:2.5rem;margin-bottom:3rem;">your donation</h2>
 
-            <!-- Frequency -->
-            <div class="mb-6">
-              <label class="block text-sm font-medium text-gray-700 mb-3">Frequency</label>
-              <div class="grid grid-cols-2 gap-3">
-                <button onclick="this.classList.add('ring-2','ring-ocean-500','bg-ocean-50');this.nextElementSibling.classList.remove('ring-2','ring-ocean-500','bg-ocean-50')" class="py-3 rounded-xl border border-gray-200 text-sm font-semibold text-gray-700 hover:border-ocean-300 transition ring-2 ring-ocean-500 bg-ocean-50">Monthly</button>
-                <button onclick="this.classList.add('ring-2','ring-ocean-500','bg-ocean-50');this.previousElementSibling.classList.remove('ring-2','ring-ocean-500','bg-ocean-50')" class="py-3 rounded-xl border border-gray-200 text-sm font-semibold text-gray-700 hover:border-ocean-300 transition">One-Time</button>
+          <!-- Frequency -->
+          <div style="margin-bottom:2.5rem;">
+            <label style="display:block;font-size:1.3rem;font-weight:500;margin-bottom:1rem;">frequency</label>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
+              <button class="btn btn-filled" style="text-align:center;" id="freq-monthly">monthly</button>
+              <button class="btn" style="text-align:center;" id="freq-once" onclick="this.classList.add('btn-filled');document.getElementById('freq-monthly').className='btn';document.getElementById('freq-monthly').style.textAlign='center'">one-time</button>
+            </div>
+          </div>
+
+          <!-- Amount -->
+          <div style="margin-bottom:2.5rem;">
+            <label style="display:block;font-size:1.3rem;font-weight:500;margin-bottom:1rem;">select amount</label>
+            <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:1rem;" id="amount-grid">
+              <button class="btn amount-btn" style="text-align:center;margin:0;padding:1rem;" data-amount="25">$25</button>
+              <button class="btn btn-filled amount-btn" style="text-align:center;margin:0;padding:1rem;" data-amount="35">$35</button>
+              <button class="btn amount-btn" style="text-align:center;margin:0;padding:1rem;" data-amount="50">$50</button>
+              <button class="btn amount-btn" style="text-align:center;margin:0;padding:1rem;" data-amount="100">$100</button>
+            </div>
+            <input type="number" class="form-input" placeholder="custom amount" id="custom-amount" />
+          </div>
+
+          <!-- Designate -->
+          <div style="margin-bottom:2.5rem;">
+            <label style="display:block;font-size:1.3rem;font-weight:500;margin-bottom:1rem;">designate your gift</label>
+            <select class="form-input">
+              <option>where most needed</option>
+              <option>Education & Scholarships</option>
+              <option>Youth Mentorship (YUMP)</option>
+              <option>Holiday Camps</option>
+              <option>Digital Literacy</option>
+              <option>Healing & Expression</option>
+              <option>Community Development</option>
+            </select>
+          </div>
+
+          <!-- Info -->
+          <div style="margin-bottom:2.5rem;">
+            <h3 style="font-size:1.8rem;margin-bottom:1.5rem;">your information</h3>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;">
+              <input type="text" class="form-input" placeholder="first name" required />
+              <input type="text" class="form-input" placeholder="last name" required />
+            </div>
+            <input type="email" class="form-input" placeholder="email address" required />
+          </div>
+
+          <!-- Dedicate -->
+          <div style="margin-bottom:2.5rem;padding:1.5rem;border:1px solid var(--main-faded);border-radius:var(--blob-soft);">
+            <label style="display:flex;align-items:center;gap:1rem;cursor:pointer;font-size:1.3rem;">
+              <input type="checkbox" style="width:1.8rem;height:1.8rem;accent-color:var(--accent);" />
+              dedicate this gift in honor or memory of someone
+            </label>
+          </div>
+
+          <button class="btn btn-accent" style="width:100%;text-align:center;font-size:1.8rem;padding:1.5rem;" onclick="this.textContent='thank you! gift received';this.disabled=true;this.style.background='var(--main)';this.style.borderColor='var(--main)';">
+            complete donation
+          </button>
+          <p style="text-align:center;font-size:1.2rem;color:var(--main-light);margin-top:1.5rem;">
+            <i class="fas fa-lock" style="margin-right:.5rem;"></i> secure, encrypted donation. tax-deductible receipt emailed instantly.
+          </p>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div style="flex:1 1 30rem;display:flex;flex-direction:column;gap:2rem;">
+        <!-- Impact -->
+        <div style="border:var(--border);border-radius:var(--blob);padding:3rem;background:var(--white);transition:all .3s ease;" onmouseover="this.style.borderRadius='var(--blob-hover)'" onmouseout="this.style.borderRadius='var(--blob)'">
+          <h3 style="font-size:1.8rem;margin-bottom:2rem;">your impact</h3>
+          <div style="display:flex;flex-direction:column;gap:1.5rem;">
+            <div style="display:flex;align-items:flex-start;gap:1.2rem;">
+              <div style="width:4rem;height:4rem;border:1px solid var(--accent-light);border-radius:var(--blob-soft);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <span style="font-size:1.2rem;font-weight:700;color:var(--accent);">$25</span>
               </div>
+              <p style="font-size:1.3rem;color:var(--main-light);line-height:1.6;">Provides school supplies for one child for a full term</p>
             </div>
-
-            <!-- Amount -->
-            <div class="mb-6">
-              <label class="block text-sm font-medium text-gray-700 mb-3">Select Amount</label>
-              <div class="grid grid-cols-4 gap-3 mb-3" id="amount-grid">
-                <button class="amount-btn py-3 rounded-xl border border-gray-200 text-sm font-semibold text-gray-700 hover:border-ocean-300 transition" data-amount="25">$25</button>
-                <button class="amount-btn py-3 rounded-xl border border-gray-200 text-sm font-semibold text-gray-700 hover:border-ocean-300 transition ring-2 ring-ocean-500 bg-ocean-50" data-amount="35">$35</button>
-                <button class="amount-btn py-3 rounded-xl border border-gray-200 text-sm font-semibold text-gray-700 hover:border-ocean-300 transition" data-amount="50">$50</button>
-                <button class="amount-btn py-3 rounded-xl border border-gray-200 text-sm font-semibold text-gray-700 hover:border-ocean-300 transition" data-amount="100">$100</button>
+            <div style="display:flex;align-items:flex-start;gap:1.2rem;">
+              <div style="width:4rem;height:4rem;border:1px solid var(--accent-light);border-radius:var(--blob-soft);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <span style="font-size:1.2rem;font-weight:700;color:var(--accent);">$35</span>
               </div>
-              <input type="number" placeholder="Custom amount" class="form-input" id="custom-amount" />
+              <p style="font-size:1.3rem;color:var(--main-light);line-height:1.6;">Sponsors one child for a month — education, health, mentorship</p>
             </div>
-
-            <!-- Designate -->
-            <div class="mb-6">
-              <label class="block text-sm font-medium text-gray-700 mb-2">Designate your gift</label>
-              <select class="form-input">
-                <option>Where most needed</option>
-                <option>Education & Scholarships</option>
-                <option>Youth Mentorship (YUMP)</option>
-                <option>Holiday Camps</option>
-                <option>Digital Literacy</option>
-                <option>Healing & Expression</option>
-                <option>Community Development</option>
-              </select>
-            </div>
-
-            <!-- Personal Info -->
-            <div class="mb-6 space-y-4">
-              <h3 class="text-lg font-semibold text-gray-900">Your Information</h3>
-              <div class="grid sm:grid-cols-2 gap-4">
-                <input type="text" placeholder="First name" class="form-input" required />
-                <input type="text" placeholder="Last name" class="form-input" required />
+            <div style="display:flex;align-items:flex-start;gap:1.2rem;">
+              <div style="width:4rem;height:4rem;border:1px solid var(--accent-light);border-radius:var(--blob-soft);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <span style="font-size:1.2rem;font-weight:700;color:var(--accent);">$50</span>
               </div>
-              <input type="email" placeholder="Email address" class="form-input" required />
+              <p style="font-size:1.3rem;color:var(--main-light);line-height:1.6;">Funds a full Chapati JOY Festival for 30+ children</p>
             </div>
-
-            <!-- Dedicate -->
-            <div class="mb-8 p-4 bg-warm-50 rounded-2xl border border-gray-100">
-              <label class="flex items-center gap-3 cursor-pointer">
-                <input type="checkbox" class="w-5 h-5 rounded border-gray-300 text-ocean-600 focus:ring-ocean-500" />
-                <span class="text-sm text-gray-600">Dedicate this gift in honor or memory of someone</span>
-              </label>
+            <div style="display:flex;align-items:flex-start;gap:1.2rem;">
+              <div style="width:4rem;height:4rem;border:1px solid var(--accent-light);border-radius:var(--blob-soft);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+                <span style="font-size:1.2rem;font-weight:700;color:var(--accent);">$100</span>
+              </div>
+              <p style="font-size:1.3rem;color:var(--main-light);line-height:1.6;">Equips the computer lab with learning software for 50 students</p>
             </div>
-
-            <button class="w-full py-4 bg-gold-400 text-gray-900 rounded-2xl font-semibold text-lg hover:bg-gold-300 transition shadow-lg shadow-gold-400/20" onclick="this.textContent='Thank You! Gift Received'; this.disabled=true; this.classList.add('bg-sage-500','text-white','shadow-sage-500/20'); this.classList.remove('bg-gold-400','shadow-gold-400/20','hover:bg-gold-300');">
-              Complete Donation
-            </button>
-            <p class="text-center text-xs text-gray-400 mt-4">Secure, encrypted donation. Tax-deductible receipt emailed instantly.</p>
           </div>
         </div>
 
-        <!-- Sidebar -->
-        <div class="lg:col-span-2 space-y-6">
-          <!-- Impact Preview -->
-          <div class="bg-white rounded-3xl p-6 border border-gray-100 shadow-lg">
-            <h3 class="font-semibold text-gray-900 mb-4">Your Impact</h3>
-            <div class="space-y-4">
-              <div class="flex items-start gap-3">
-                <div class="w-8 h-8 bg-ocean-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <span class="text-ocean-600 font-bold text-xs">$25</span>
-                </div>
-                <p class="text-sm text-gray-500">Provides school supplies for one child for a full term</p>
-              </div>
-              <div class="flex items-start gap-3">
-                <div class="w-8 h-8 bg-gold-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <span class="text-gold-600 font-bold text-xs">$35</span>
-                </div>
-                <p class="text-sm text-gray-500">Sponsors one child for a month — education, health, mentorship</p>
-              </div>
-              <div class="flex items-start gap-3">
-                <div class="w-8 h-8 bg-sage-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <span class="text-sage-600 font-bold text-xs">$50</span>
-                </div>
-                <p class="text-sm text-gray-500">Funds a full Chapati JOY Festival for 30+ children</p>
-              </div>
-              <div class="flex items-start gap-3">
-                <div class="w-8 h-8 bg-warm-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <span class="text-warm-700 font-bold text-xs">$100</span>
-                </div>
-                <p class="text-sm text-gray-500">Equips the computer lab with learning software for 50 students</p>
-              </div>
+        <!-- Trust -->
+        <div style="border:var(--border);border-radius:var(--blob);padding:3rem;background:var(--white);transition:all .3s ease;" onmouseover="this.style.borderRadius='var(--blob-hover)'" onmouseout="this.style.borderRadius='var(--blob)'">
+          <h3 style="font-size:1.8rem;margin-bottom:2rem;">transparency promise</h3>
+          <div style="display:flex;flex-direction:column;gap:1.2rem;">
+            <div style="display:flex;align-items:center;gap:1rem;">
+              <i class="fas fa-check" style="color:var(--accent);font-size:1.3rem;"></i>
+              <span style="font-size:1.3rem;color:var(--main-light);">94% of funds go directly to programs</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:1rem;">
+              <i class="fas fa-check" style="color:var(--accent);font-size:1.3rem;"></i>
+              <span style="font-size:1.3rem;color:var(--main-light);">annual financial reports published</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:1rem;">
+              <i class="fas fa-check" style="color:var(--accent);font-size:1.3rem;"></i>
+              <span style="font-size:1.3rem;color:var(--main-light);">registered nonprofit in Germany (e.V.)</span>
+            </div>
+            <div style="display:flex;align-items:center;gap:1rem;">
+              <i class="fas fa-check" style="color:var(--accent);font-size:1.3rem;"></i>
+              <span style="font-size:1.3rem;color:var(--main-light);">tax-deductible donations</span>
             </div>
           </div>
+        </div>
 
-          <!-- Trust -->
-          <div class="bg-white rounded-3xl p-6 border border-gray-100 shadow-lg">
-            <h3 class="font-semibold text-gray-900 mb-4">Transparency Promise</h3>
-            <div class="space-y-3">
-              <div class="flex items-center gap-3">
-                <svg class="w-5 h-5 text-sage-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                <p class="text-sm text-gray-500">94% of funds go directly to programs</p>
-              </div>
-              <div class="flex items-center gap-3">
-                <svg class="w-5 h-5 text-sage-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                <p class="text-sm text-gray-500">Annual financial reports published</p>
-              </div>
-              <div class="flex items-center gap-3">
-                <svg class="w-5 h-5 text-sage-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                <p class="text-sm text-gray-500">Registered nonprofit in Germany (e.V.)</p>
-              </div>
-              <div class="flex items-center gap-3">
-                <svg class="w-5 h-5 text-sage-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                <p class="text-sm text-gray-500">Tax-deductible donations</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Quote -->
-          <div class="bg-gradient-to-br from-ocean-700 to-ocean-800 rounded-3xl p-6 text-white">
-            <p class="italic text-white/80 leading-relaxed mb-4">"The best way to find yourself is to lose yourself in the service of others."</p>
-            <p class="text-white/50 text-sm">— Mahatma Gandhi</p>
-          </div>
+        <!-- Quote -->
+        <div style="background:var(--main);border-radius:var(--blob);padding:3rem;animation:morph 12s ease-in-out infinite;">
+          <p style="font-size:1.5rem;color:rgba(250,246,240,.7);line-height:1.8;font-style:italic;margin-bottom:1.5rem;">"The best way to find yourself is to lose yourself in the service of others."</p>
+          <p style="font-size:1.3rem;color:rgba(250,246,240,.3);">— Mahatma Gandhi</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-white/60 py-12">
-    <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
-      <div class="flex items-center gap-2">
-        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-gold-400 to-gold-600 flex items-center justify-center"><span class="text-white font-bold text-sm">B+</span></div>
-        <span class="font-serif font-bold text-white">BetterMe<span class="text-gold-400">+</span></span>
+  <section class="footer">
+    <div class="box-container">
+      <div class="box">
+        <h3>betterMe<i class="fas fa-heart" style="color:var(--accent);margin-left:.5rem;font-size:1.4rem"></i></h3>
+        <p style="font-size:1.3rem;line-height:1.8;color:rgba(250,246,240,.4)">Empowering vulnerable Kenyan youth.</p>
       </div>
-      <p class="text-xs">&copy; 2026 BetterMe+ e.V. All rights reserved.</p>
+      <div class="box">
+        <h3>quick links</h3>
+        <a href="../index.html"><i class="fas fa-arrow-right"></i> home</a>
+        <a href="sponsor.html"><i class="fas fa-arrow-right"></i> sponsor</a>
+        <a href="volunteer.html"><i class="fas fa-arrow-right"></i> volunteer</a>
+      </div>
+      <div class="box">
+        <h3>contact</h3>
+        <a href="#"><i class="fas fa-map-marker-alt"></i> Kisumu, Kenya</a>
+        <a href="#"><i class="fas fa-envelope"></i> info@bettermeplus.org</a>
+      </div>
     </div>
-  </footer>
+    <div class="credit">&copy; 2026 <span style="border-bottom:var(--border-hover)">betterMe+</span> e.V. all rights reserved</div>
+  </section>
 
   <script src="../js/main.js"></script>
   <script>
-    // Amount selection
     document.querySelectorAll('.amount-btn').forEach(btn => {
       btn.addEventListener('click', () => {
-        document.querySelectorAll('.amount-btn').forEach(b => b.classList.remove('ring-2','ring-ocean-500','bg-ocean-50'));
-        btn.classList.add('ring-2','ring-ocean-500','bg-ocean-50');
+        document.querySelectorAll('.amount-btn').forEach(b => { b.classList.remove('btn-filled'); });
+        btn.classList.add('btn-filled');
         document.getElementById('custom-amount').value = '';
       });
     });
     document.getElementById('custom-amount').addEventListener('focus', () => {
-      document.querySelectorAll('.amount-btn').forEach(b => b.classList.remove('ring-2','ring-ocean-500','bg-ocean-50'));
+      document.querySelectorAll('.amount-btn').forEach(b => b.classList.remove('btn-filled'));
     });
   </script>
 </body>
