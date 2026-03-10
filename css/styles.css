@@ -4,9 +4,9 @@
   --main: #443;
   --main-light: #665;
   --main-faded: rgba(68,68,51,0.08);
-  --accent: #c8956c;
-  --accent-light: #e8c9a8;
-  --accent-dark: #a06a3a;
+  --accent: #c05621;
+  --accent-light: #e8a070;
+  --accent-dark: #9a4419;
   --cream: #faf6f0;
   --cream-dark: #f0e8da;
   --white: #fff;
@@ -100,13 +100,13 @@ body {
   border-radius: var(--blob-hover);
 }
 .btn-accent {
-  background: var(--accent);
+  background: #c05621;
   color: var(--white);
-  border-color: var(--accent);
+  border-color: #c05621;
 }
 .btn-accent:hover {
-  background: var(--accent-dark);
-  border-color: var(--accent-dark);
+  background: #9a4419;
+  border-color: #9a4419;
   border-style: dashed;
   border-radius: var(--blob-hover);
 }
@@ -162,14 +162,14 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 3rem;
-  color: var(--accent);
+  color: #c05621;
   background: transparent;
   transition: all .3s ease;
 }
 .image-slider .slider-item:hover .slider-icon {
   border-style: dashed;
-  border-color: var(--accent);
-  color: var(--accent-dark);
+  border-color: #c05621;
+  color: #9a4419;
   border-radius: var(--blob-hover);
 }
 .image-slider .slider-item span {
@@ -233,7 +233,7 @@ body {
   font-size: 2.5rem;
   font-weight: 700;
 }
-.header .logo i { color: var(--accent); }
+.header .logo i { color: #c05621; }
 .header .navbar a {
   margin: 0 1.2rem;
   font-size: 1.6rem;
@@ -314,7 +314,7 @@ body {
   margin-bottom: 2rem;
 }
 .home .row .content h3 em {
-  color: var(--accent);
+  color: #c05621;
   font-style: normal;
   position: relative;
 }
@@ -322,7 +322,7 @@ body {
   content: '';
   position: absolute; bottom: .3rem; left: 0;
   width: 100%; height: .3rem;
-  background: var(--accent);
+  background: #c05621;
   border-radius: var(--blob);
 }
 .home .row .content p {
