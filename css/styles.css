@@ -131,9 +131,28 @@ body {
 }
 
 /* Hero floating image (like coffee cup) */
+.hero-cycle-wrap {
+  position: relative;
+  display: inline-block;
+  height: 38rem;
+  width: 38rem;
+}
 .hero-float-img {
   height: 38rem;
-  animation: float 4s linear infinite;
+  width: 38rem;
+  object-fit: cover;
+  animation: aboutImage 4s linear infinite;
+  border: var(--border);
+}
+.hero-cycle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+}
+.hero-cycle.active {
+  opacity: 1;
 }
 
 /* Image slider (like coffee shop thumbnails) */
@@ -193,6 +212,7 @@ body {
   object-fit: cover;
   animation: aboutImage 4s linear infinite;
   border: var(--border);
+  transition: opacity .4s ease;
 }
 @keyframes fade-up {
   from { opacity: 0; transform: translateY(3rem); }

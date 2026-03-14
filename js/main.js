@@ -64,6 +64,36 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+// Cycling images with crossfade on blob pump
+const imgA = document.getElementById('cycling-img-a');
+const imgB = document.getElementById('cycling-img-b');
+if (imgA && imgB) {
+  const cycleImages = [
+    'assets/images/d4.jpg',
+    'assets/images/d6.jpg',
+    'assets/images/d9.jpeg',
+    'assets/images/d14.jpg',
+    'assets/images/d15.jpg'
+  ];
+  // Preload all images
+  cycleImages.forEach(src => { new Image().src = src; });
+  let cycleIndex = 1;
+  let showingA = true;
+  setInterval(() => {
+    cycleIndex = (cycleIndex + 1) % cycleImages.length;
+    if (showingA) {
+      imgB.src = cycleImages[cycleIndex];
+      imgB.classList.add('active');
+      imgA.classList.remove('active');
+    } else {
+      imgA.src = cycleImages[cycleIndex];
+      imgA.classList.add('active');
+      imgB.classList.remove('active');
+    }
+    showingA = !showingA;
+  }, 4000);
+}
+
 // Image slider (for sponsor page child cards)
 document.querySelectorAll('.filter-btn').forEach(btn => {
   btn.addEventListener('click', () => {
