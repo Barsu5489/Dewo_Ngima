@@ -134,12 +134,12 @@ body {
 .hero-cycle-wrap {
   position: relative;
   display: inline-block;
-  height: 38rem;
-  width: 38rem;
+  height: 50rem;
+  width: 50rem;
 }
 .hero-float-img {
-  height: 38rem;
-  width: 38rem;
+  height: 50rem;
+  width: 50rem;
   object-fit: cover;
   animation: aboutImage 4s linear infinite;
   border: var(--border);
