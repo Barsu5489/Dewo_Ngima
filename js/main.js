@@ -94,6 +94,34 @@ if (imgA && imgB) {
   }, 4000);
 }
 
+// Mobile cycling images in how-it-works section
+const mobA = document.getElementById('mobile-cycle-a');
+const mobB = document.getElementById('mobile-cycle-b');
+if (mobA && mobB) {
+  const mobImages = [
+    'assets/images/d4.jpg',
+    'assets/images/d6.jpg',
+    'assets/images/d9.jpeg',
+    'assets/images/d14.jpg',
+    'assets/images/d15.jpg'
+  ];
+  let mobIndex = 1;
+  let mobShowingA = true;
+  setInterval(() => {
+    mobIndex = (mobIndex + 1) % mobImages.length;
+    if (mobShowingA) {
+      mobB.src = mobImages[mobIndex];
+      mobB.classList.add('active');
+      mobA.classList.remove('active');
+    } else {
+      mobA.src = mobImages[mobIndex];
+      mobA.classList.add('active');
+      mobB.classList.remove('active');
+    }
+    mobShowingA = !mobShowingA;
+  }, 4000);
+}
+
 // Image slider (for sponsor page child cards)
 document.querySelectorAll('.filter-btn').forEach(btn => {
   btn.addEventListener('click', () => {

@@ -206,13 +206,35 @@ body {
   align-items: center;
   justify-content: center;
 }
-.about-image-blob img {
+.about-image-blob img.static-blob {
   width: 100%;
   max-width: 50rem;
   object-fit: cover;
   animation: aboutImage 4s linear infinite;
   border: .1rem solid var(--main);
   transition: opacity .4s ease;
+}
+/* Mobile cycling images in how-it-works — hidden on desktop */
+.mobile-cycle-wrap {
+  display: none;
+  position: relative;
+  width: 100%;
+  max-width: 50rem;
+  height: 35rem;
+}
+.mobile-cycle {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: aboutImage 4s linear infinite;
+  border: .1rem solid var(--main);
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+}
+.mobile-cycle.active {
+  opacity: 1;
 }
 @keyframes fade-up {
   from { opacity: 0; transform: translateY(3rem); }
@@ -1119,6 +1141,14 @@ body {
     flex-direction: column;
     justify-content: center;
   }
+  /* On mobile: hide static blob image, show cycling images in how-it-works */
+  .about-image-blob .static-blob {
+    display: none;
+  }
+  .about-image-blob .mobile-cycle-wrap {
+    display: block;
+  }
+
   .home .row .content .btn-group {
     margin-top: auto;
     padding-top: 3rem;
